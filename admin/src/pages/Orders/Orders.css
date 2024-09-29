@@ -1,0 +1,107 @@
+.order {
+  width: 75%;
+  margin: 50px auto;
+}
+.order-item {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1.3fr;
+  align-items: start;
+  gap: 30px;
+  border: 1px solid red;
+  margin: 30px 0px;
+  font-size: 14px;
+  color: #505050;
+  padding: 20px;
+}
+.order-item-food,
+.order-item-name {
+  font-weight: 600;
+}
+.order-item-name {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+.order-item-address {
+  margin-bottom: 10px;
+}
+.order-item select {
+  background-color: rgba(255, 0, 0, 0.227);
+  border: 1px solid red;
+  width: max(10vw, 120px);
+  padding: 10px;
+  outline: none;
+}
+.order-list .btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+.order-list .btn button {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  background-color: green;
+  color: white;
+  border-radius: 4px;
+}
+.order-list .btn .red {
+  background-color: red;
+}
+@media (max-width: 1030px) {
+  .order-item {
+    font-size: 12px;
+    grid-template-columns: 0.5fr 2fr 0.8fr 0.8fr 1.4fr;
+    padding: 15px;
+  }
+  .order-item select {
+    padding: 5px;
+    font-size: 12px;
+  }
+  .order-item img {
+    width: 40px;
+  }
+  .order-list .btn {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 750px) {
+  .order {
+    margin-top: 30px;
+  }
+  .order-item {
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 25px;
+  }
+  .order-list .btn {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn button {
+    font-size: 13px;
+  }
+}
+@media (max-width: 500px) {
+  .order{
+    margin-top: 20px;
+  }
+  .order-item{
+    margin: 20px 0;
+    grid-template-columns: 1.5fr 2.5fr 1fr;
+    row-gap: 25px;
+    column-gap: 5px;
+    padding: 15px 10px;
+  }
+}
+.delivered {
+  background-color: hsla(147, 71%, 80%, 0.3);
+  border-color: green;
+}
+.reject {
+  background-color: rgba(255, 0, 0, 0.04);
+}
+select.grey {
+  background-color: #e6f9e6;
+  border: 1px solid #33cc33;
+}

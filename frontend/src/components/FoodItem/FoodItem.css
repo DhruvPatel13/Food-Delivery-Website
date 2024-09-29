@@ -1,0 +1,126 @@
+.food-item {
+  width: 100%;
+  border-radius: 2px;
+  animation: fadeIn 1s;
+  padding: 2px;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.food-item:hover {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.food-item:hover .content {
+  transition: all 0.4s linear;
+  transform: scale(1.08);
+  background: rgba(219, 103, 103, 0.08);
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.food-item:hover .food-item-image {
+  border-radius: 15px 15px 0 0;
+}
+
+.food-item-image {
+  width: 100%;
+}
+.food-item-info {
+  padding: 20px;
+}
+.food-item-name-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.food-item-name-rating p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.food-item-name-rating img {
+  width: 70px;
+}
+.food-item-desc {
+  color: #676767;
+  font-size: 14px;
+}
+.food-item-price {
+  color: red;
+  font-weight: 500;
+  margin: 10px 0;
+  font-size: 22px;
+}
+.food-item-img-container {
+  position: relative;
+}
+.food-item-img-container .add {
+  width: 35px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.food-item-counter {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 50px;
+  background-color: #fff;
+}
+.food-item-counter img {
+  width: 30px;
+}
+.highlight {
+  animation: high 1.5s ease-in-out infinite;
+  position: absolute;
+  top: -2rem;
+  left: 0;
+}
+@keyframes high {
+  0% {
+    top: 0;
+    background-color: transparent;
+  }
+  100% {
+    top: -1rem;
+    background-color: #f0f1f2;
+  }
+}
+@media (max-width: 500px) {
+  .food-item:hover {
+    box-shadow: rgba(38, 57, 77, 0.522) 0px 20px 30px -10px;
+    border-radius: 15px;
+    padding: 0;
+    transition: box-shadow 1s ease;
+  }
+  .food-item:hover .content {
+    all: unset;
+  }
+  .food-item-image {
+    width: 100%;
+  }
+  .highlight {
+    animation: high 2s ease-in-out infinite;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  @keyframes high2 {
+    0% {
+      background-color: transparent;
+    }
+    50% {
+      background-color: #f0f1f2;
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+}
