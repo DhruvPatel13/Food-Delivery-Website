@@ -11,5 +11,5 @@ Key features:-<br/>
 • Responsive design for mobile, tablet, and desktop.
 
 Stripe dummy US card number:- [4242424242424242]<br/>
-Frontend Link:-<br/>
-Admin Panel Link:-
+Frontend Link:-https://food-delivery-frontend-rr3b.onrender.com<br/>
+Admin Panel Link:- https://food-delivery-admin-c4xa.onrender.com
