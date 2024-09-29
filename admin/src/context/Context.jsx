@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import axios from "axios"
+import axios from "axios";
 export const Context = createContext(null);
 
 const ContextProvider = (props) => {
@@ -7,9 +7,7 @@ const ContextProvider = (props) => {
   const [token, setToken] = useState("");
   const [loading, setLoading] = useState(true);
 
-  // const url = "http://localhost:4000";
-  const url = "http://192.168.4.101:4000";
-
+  const url = "https://food-delivery-backend-y4ey.onrender.com";
 
   const fetchList = async () => {
     const response = await axios.get(`${url}/api/food/list`);
@@ -24,7 +22,6 @@ const ContextProvider = (props) => {
     fetchList();
   }, []);
 
-
   useEffect(() => {
     if (localStorage.getItem("token")) {
       setToken(localStorage.getItem("token"));
@@ -36,7 +33,7 @@ const ContextProvider = (props) => {
     token,
     setToken,
     loading,
-    foodList
+    foodList,
   };
   return (
     <Context.Provider value={contextValue}>{props.children}</Context.Provider>

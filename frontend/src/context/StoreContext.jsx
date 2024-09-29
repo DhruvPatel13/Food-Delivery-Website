@@ -8,8 +8,8 @@ const StoreContextProvider = (props) => {
   const [loading, setLoading] = useState(true);
   const [cartItems, setCartItems] = useState({});
 
-  // const url = "http://localhost:4000";
-  const url = "http://192.168.4.101:4000";
+  const url = "https://food-delivery-backend-y4ey.onrender.com";
+  
   const [token, setToken] = useState("");
   const [food_list, setFood_list] = useState([]);
   const [weekly_list, setWeekly_list] = useState([]);
@@ -100,7 +100,7 @@ const StoreContextProvider = (props) => {
     url,
     token,
     setToken,
-    loading
+    loading,
   };
   return (
     <StoreContext.Provider value={contextValue}>
